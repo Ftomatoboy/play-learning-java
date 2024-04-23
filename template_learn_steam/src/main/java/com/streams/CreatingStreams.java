@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -28,13 +29,18 @@ public class CreatingStreams {
         Path path = Paths.get("../gutenberg/alice30.txt");
         String contents = new String(Files.readAllBytes(path), StandardCharsets.UTF_8);
 
-        // Stream.of 产生一个给定值的流  Stream.empty 产生一个不包含任何元素的流
+        // Stream.of 产生一个给定值的流,其中参数可以是"T..."  Stream.empty 产生一个不包含任何元素的流
         Stream<String> words = Stream.of(contents.split("\\PL+"));
         show("words",words);
         Stream<String> song = Stream.of("gently", "down", "the", "stream");
         show("song",song);
         Stream<Object> empty = Stream.empty();
         show("empty", empty);
+        String idStr = "2003,1757,1753,1744,1691,1687,1550,840,811,793,790,680,564,537,522,398,354,314,9,17,21,42,53,54,711,448,306";
+        List<String> collect = Stream.of(idStr.split(",")).collect(Collectors.toList());
+        for (String id : collect){
+            System.out.println("collect" + id);
+        }
 
         // Stream.generate(Supplier<T> s)产生一个无限流，他的值是通过反复调用函数s来构建的
         Stream<String> echos = Stream.generate(() -> "Echo");
