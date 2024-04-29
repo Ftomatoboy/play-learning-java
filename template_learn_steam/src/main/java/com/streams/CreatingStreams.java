@@ -110,14 +110,14 @@ public class CreatingStreams {
          * takeWhile / dropWhile
          * concat
          */
-        // takeWhile 产生一个流，用于从流中选择元素，直到给定的谓词第一次返回false。
+        // takeWhile 产生一个流，用于从流中选择元素，直到给定的谓词第一次返回false。 java9
         // 这意味着它会从流的开头开始处理元素，并在遇到第一个不满足条件的元素时停止处理，返回之前所有满足条件的元素组成的新流。
         //List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
         //List<Integer> result = numbers.stream()
         //        .takeWhile(n -> n < 4)
         //        .collect(Collectors.toList());// 结果：[1, 2, 3]
 
-        // dropWhile 与takeWhile相反，它从流的开始处理元素，并且丢弃满足谓词的元素，直到谓词第一次返回false。
+        // dropWhile 与takeWhile相反，它从流的开始处理元素，并且丢弃满足谓词的元素，直到谓词第一次返回false。 java9
         // 一旦谓词对某个元素返回false，dropWhile就会停止丢弃元素，并包括该元素及其后的所有元素在内。
         //Stream<String> filterNumber = numberStream.filter(s -> Integer.valueOf(s) > 5);
         //List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
