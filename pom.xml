@@ -26,7 +26,7 @@
     <java.version>1.8</java.version>
     <template_learn_steam.version>1.0-SNAPSHOT</template_learn_steam.version>
     <concurrency_learnning.version>1.0-SNAPSHOT</concurrency_learnning.version>
-    <slf4j-api.version>2.0.13</slf4j-api.version>
+
   </properties>
 
   <dependencyManagement>
@@ -41,16 +41,6 @@
         <artifactId>concurrency_learnning</artifactId>
         <version>${concurrency_learnning.version}</version>
       </dependency>
-      <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>${slf4j-api.version}</version>
-      </dependency>
-<!--      <dependency>-->
-<!--        <groupId>org.projectlombok</groupId>-->
-<!--        <artifactId>lombok</artifactId>-->
-<!--        <version>1.18.32</version>-->
-<!--      </dependency>-->
     </dependencies>
   </dependencyManagement>
 
