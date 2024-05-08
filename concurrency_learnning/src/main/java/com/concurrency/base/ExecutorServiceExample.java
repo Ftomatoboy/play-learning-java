@@ -15,7 +15,7 @@ public class ExecutorServiceExample {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
 
         // 2.直接创建 ExecutorService 的实例 以下示例与工厂方法 newSingleThreadExecutor() 的 源代码 非常相似 ，所以一般情况下不需要详细的手动配置
-        new ThreadPoolExecutor(1,1,0L, TimeUnit.MICROSECONDS,new LinkedBlockingQueue<Runnable>());
+        //new ThreadPoolExecutor(1,1,0L, TimeUnit.MICROSECONDS,new LinkedBlockingQueue<Runnable>());
 
         // 创建一个可运行的任务
         Runnable runnableTask = () -> {
